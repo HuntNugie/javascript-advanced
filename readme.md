@@ -43,3 +43,24 @@ Manusia.prototype.makan = function(){
 let nugie = new Manusia("nugie",21)
 console.log(nugie.makan()) //ini salah satu contoh mendapatkan method prototype 
 ```
+
+## Execution context,hoisting,scope
+
+### Execution context
+di javascript ada 2 fase
+-creation phase
+-execution phase
+
+creation phase -> semua variabel dan function akan di buat di dalam memori terlebih dahulu(hoisting) dimana variabel akan di set di isi dengan undeinfed dan function akan dis set dan disi dengan isi function nya.
+
+<br>
+<br>
+execution phase -> nah disini baru fase akan mengeksekusi code baris per baris dan jika ada kode yang menjalankan function maka function tersebut akan mengalami yang namanya local creation context disini variabel dan function yang ada di dalam function akan di hoisting setelah di hoisting akan kembali lagi mengeksekusi function nya dan selesai.
+dan execution stack akan di hilangkan dalam memori
+
+### hoisting
+hoisting merupakan sebuah aksi dimana variabel atau function akan di angkat ke atas terlebih dahulu untuk masuk ke dalam creation phase setelah creation phase baru ke execution phase
+
+### Scope
+scope itu seperti wilayah kekuasaan ada yang namanya global scope ada yang namnya local scope <br>
+-> semisal ada function yang di dalamnya terdapat variabel dan argument, di function tersebut terdapat local scope dan pencarian untuk execution phase yang ada di dalam function tersebut akan mengutamakan local scope function nya seandainya di dalam nya terdapat variabel untuk execution phase nya maka akan itu di dahului, dan jika tidak ada maka akan mencari ke argument jika masih tidak ada maka akan mencari ke global scope
