@@ -64,3 +64,17 @@ hoisting merupakan sebuah aksi dimana variabel atau function akan di angkat ke a
 ### Scope
 scope itu seperti wilayah kekuasaan ada yang namanya global scope ada yang namnya local scope <br>
 -> semisal ada function yang di dalamnya terdapat variabel dan argument, di function tersebut terdapat local scope dan pencarian untuk execution phase yang ada di dalam function tersebut akan mengutamakan local scope function nya seandainya di dalam nya terdapat variabel untuk execution phase nya maka akan itu di dahului, dan jika tidak ada maka akan mencari ke argument jika masih tidak ada maka akan mencari ke global scope
+
+### closure
+closure adalah dimana local scope function mengingat dan membutuhkan nilai dari lexical scope nya 
+
+```js
+function hello(waktu){
+    return function(nama){
+        return `selamat ${waktu} ${nama}` // disini waktu di butuhkan di local scope sehingga mencari di parameter di lexical scope nya
+    }
+}
+```
+
+
+
