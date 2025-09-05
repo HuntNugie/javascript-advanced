@@ -109,4 +109,4 @@ let tes = nama => `nama anda ${nama}` //jika normal
 ```
 
 ## higher order function
-sebuah konsep dimana membuat fungsi dengan fungsi lain di dalam nya sehingga tercapai abstraksi yang memnyembunyikan kerumitan di dalam function nya lagi
+sebuah konsep dimana dapat menampung function sebagai parameter ataupun me ngembalikan hasil function kembali sehingga tercapai nya functional programming dan abstraksi
