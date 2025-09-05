@@ -108,3 +108,5 @@ let mhs = mahasiswa.map(nama => nama.length) // bisa seperti ini  jika callback
 let tes = nama => `nama anda ${nama}` //jika normal
 ```
 
+## higher order function
+sebuah konsep dimana membuat fungsi dengan fungsi lain di dalam nya sehingga tercapai abstraksi yang memnyembunyikan kerumitan di dalam function nya lagi
