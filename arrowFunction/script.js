@@ -15,8 +15,19 @@
 // let hallo = (nama,waktu)=> `selamat ${waktu} ${nama}`
 
 // jika hanya punya 1 paramter dan hanya mengembalikan return
-let mahasiswa = ["Nugie kurniawan","alexander kurniawan","muhammad nadin nugraha"]
+// let mahasiswa = ["Nugie kurniawan","alexander kurniawan","muhammad nadin nugraha"]
 
-let mhs = mahasiswa.map(nama => nama.length) // bisa seperti ini  jika callback
+// let mhs = mahasiswa.map(nama => nama.length) // bisa seperti ini  jika callback
 
-let tes = nama => `nama anda ${nama}` //jika normal
+// let tes = nama => `nama anda ${nama}` //jika normal
+
+// konsep this
+// konsep this di arrow function
+// dalam arrow function tidak ada konsep this oleh karna itu this di arrow function itu mengikuti lexical scope nya
+let Manusia = {
+    nama: "Nugie kurniawan",
+    umur: 21,
+    hello: ()=>{
+        return `halo nama saya ${this.nama}` // ini akan jadi undefined karna dalam object literal itu tidak ada konsep this
+    },
+}
