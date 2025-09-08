@@ -1,12 +1,10 @@
 // tag template literal berfungsi untuk membuat template literal di pinggir nya bisa menjadi parameter di function tag nya
 
-let Highlight = function(strings,...value)
-{  
+let Highlight = function(strings,...values){
     return strings.reduce((hasil,str,index)=>{
-        return `${hasil}${str} <span style="background-color:salmon"> ${value[index] || ''}</span>`
-},'') 
+        return `${hasil}${str} <span style="background-color:red">${values[index]}</span> `
+    },'')
 }
-
 
 nama = "Nugie kurniawan"
 let umur = 21
