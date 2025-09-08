@@ -3,7 +3,7 @@
 let Highlight = function(strings,...value)
 {  
     return strings.reduce((hasil,str,index)=>{
-        return `${hasil}${str}${value[index] || ''}`
+        return `${hasil}${str} <span style="background-color:salmon"> ${value[index] || ''}</span>`
 },'') 
 }
 
