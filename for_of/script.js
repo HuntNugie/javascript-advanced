@@ -21,3 +21,9 @@ let string = "Nugie kurniawan"
 for(const c of string){
     console.log(c)
 }
+
+// node list
+const li = document.querySelectorAll("li")
+for(const nama of li){
+    console.log(nama.textContent)
+}
