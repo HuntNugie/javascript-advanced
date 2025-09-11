@@ -110,3 +110,61 @@ let tes = nama => `nama anda ${nama}` //jika normal
 
 ## higher order function
 sebuah konsep dimana dapat menampung function sebagai parameter ataupun me ngembalikan hasil function kembali sehingga tercapai nya functional programming dan abstraksi
+
+## template literal
+template literal merupakan sebuah format string dimana kita dapat menambahkan sebuah expression ke dalam string nya langsung tanpa harus melakukan concat serta kita juga dapat melakukan banyak hal di template literal seperti kita dapat melakukan tag template dan interpolasi expressi
+
+### Contoh Cara membuatnya
+```js
+let nama = "Nugie kurniawan"
+let teks = `nama saya adalah ${nama}`
+```
+
+## destructuring assigment
+Destructuring assigment merupakan cara dimana kita dapat membongkar isi dari array ataupun object untuk memasukan nilainya ke dalam variabel dengan lebih mudah, destructuring juga dapat menampung nilai array dari return value function ataupung kita dapat membongkar langsung key dan value dari object langsung dari arguments/parameter function nya
+
+### Contoh Cara Membuatnya
+```js
+
+const [a,b] = [1,2] // ini artinya a akan di masukan nilai 1 dan b akan di masukan nilai 2
+
+
+// dan untuk array ini sangat perlu di perhatikan banget urutan dari array nya
+let angka = [1,2,3,4,5]
+const [satu,dua,...sisa] = angka // ini artinya satu dan dua akan dimasuki nilai 1 dan 2 dari array angka dan sisanya di masukan ke rest parameter dan akan berbentuk array kembali 
+
+// untuk pembuatan destructuring assigment di object contohnya di objct literal ini perlu di perhatikan nama key nya karna harus sama nama key nya bukan dengan urutan nya
+let manusia = {nama:"Nugie kurniawan",umur:21}
+
+const {nama,umur} = manusia
+
+// jika ingin beda nama variabel nya dengan nama key dari object nya
+const {nama:name,umur:age} = manusia
+```
+
+## for of
+Merupakan salah satu cara looping untuk iterable seperti (string,nodelist,array)
+
+### Contoh Cara membuatnya
+```js
+// array
+let nama = ["Nugie kurniawan","Muhammad  nadin nugraha","alexander kurniawan"]
+
+for(const n of nama){
+    console.log(n) // akan mendapatkan isi array
+}
+
+// string
+let teks = "Nugie kurniawan"
+for(const c of teks){
+    console.log(c) // ini akan mendapatkan masing masing karakter dari string nya seperti N,u,g,i,e dan spasi juga akan kehitung sebagai karakter nya jadi akna ikut di cetak juga
+}
+
+// nodelist
+let node = document.querySelectorAll("li")
+
+for(const attribute of node){
+    console.log(attribute.textContent) // ini akan mengambil nilai dari element html nya jadi bukan element nya saja tetapi isinya
+}
+```
+
