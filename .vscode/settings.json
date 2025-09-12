@@ -1,5 +1,6 @@
 {
     "emmet.includeLanguages": {
         "javascript" : "html"
-    }
+    },
+    "window.zoomLevel": 1.2
 }
