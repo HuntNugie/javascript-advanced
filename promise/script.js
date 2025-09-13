@@ -34,6 +34,9 @@ function getData(link){
     })
 }
 getData("https://bukuacak-9bdcb4ef2605.herokuapp.com/api/v1/book?page=1&year=2023&genre=Self-Improvement&keyword=Berani")
+    .finally(()=>{
+        console.log("Setelah beberapa saat menunggu akhirnya berhasil")
+    })
     .then(response => {
         const {books} = response
         let result = books.map(el=>{
